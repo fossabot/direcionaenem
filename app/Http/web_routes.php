@@ -14,7 +14,6 @@ Route::group(['as' => 'instructor.', 'prefix' => 'instructor', 'namespace' => 'A
     ]);
 });
 
-Route::get('/', function ()
-{
-	return 'Direciona Concursos';
-});
+Route::get('/', 'App\Http\Controllers\Web\SiteController@index');
+Route::get('quemsomos', 'App\Http\Controllers\Web\SiteController@quemsomos');
+Route::post('/', 'App\Http\Controllers\Web\SiteController@registrar');
