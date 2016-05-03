@@ -14,4 +14,3 @@ Route::group(['as' => 'instructor.', 'prefix' => 'instructor', 'namespace' => 'A
         'uses' => 'DashboardController@index'
     ]);
 });
-
