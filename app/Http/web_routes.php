@@ -7,10 +7,14 @@ Route::group(['as' => 'student.', 'namespace' => 'App\Http\Controllers\Web\Stude
     ]);
 });
 
-Route::group(['as' => 'instructor.', 'prefix' => 'instructor', 'namespace' => 'App\Http\Controllers\Web\Instructor'],
-    function () {
+Route::group(['as' => 'instructor.', 'prefix' => 'instructor', 'namespace' => 'App\Http\Controllers\Web\Instructor'], function () {
     Route::get('/dashboard', [
         'as'   => 'dashboard',
         'uses' => 'DashboardController@index'
     ]);
+});
+
+Route::get('/', function ()
+{
+	return 'Direciona Concursos';
 });
