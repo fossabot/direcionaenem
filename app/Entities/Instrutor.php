@@ -12,8 +12,8 @@ class Instrutor extends User
     {
         parent::boot();
 
-        static::addGlobalScope('instructor', function (Builder $builder) {
-            $builder->where('role', '=', 'instructor');
+        static::addGlobalScope('instrutor', function (Builder $builder) {
+            $builder->where('role', '=', 'instrutor');
         });
     }
 }
