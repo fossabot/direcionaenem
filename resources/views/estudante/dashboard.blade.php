@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Instructor :: Dashboard</title>
+    <title>Student :: Dashboard</title>
 </head>
 <body>
-    <h1>Hi {{ auth()->user()->name }}!</h1>
+    <h1>Estudante</h1>
 </body>
 </html>
