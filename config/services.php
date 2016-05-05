@@ -20,7 +20,7 @@ return [
     ],
 
     'ses' => [
-        'key' => env('SES_KEY'),
+        'key'    => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
         'region' => 'us-east-1',
     ],
@@ -30,9 +30,15 @@ return [
     ],
 
     'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
+        'model'  => App\Entities\Usuario::class,
+        'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
+    ],
+
+    'github' => [
+        'client_id'     => '4ff5cbdd59ed8d1f9ef7',
+        'client_secret' => 'd0d6ecb3d4ad639fa5f5fedc8edc49640af8011f',
+        'redirect'      => 'http://localhost:8080/estudante',
     ],
 
 ];

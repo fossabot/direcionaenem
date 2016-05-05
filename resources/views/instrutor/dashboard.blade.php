@@ -5,6 +5,7 @@
     <title>Instructor :: Dashboard</title>
 </head>
 <body>
-    <h1>Instrutor</h1>
+    <h1>Instrutor {{ auth()->user()->nome }}</h1>
+    <a href="{{ url('deslogar') }}">Deslogar</a>
 </body>
 </html>
