@@ -15,4 +15,4 @@ DATA_TOGGLE:'[data-toggle="tab"], [data-toggle="pill"]',DROPDOWN_TOGGLE:".dropdo
 AdminPlus.Sidebar.init();
 //# sourceMappingURL=main.min.js.map
 
-//# sourceMappingURL=login.js.map
+//# sourceMappingURL=app.js.map

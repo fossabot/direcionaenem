@@ -29,7 +29,7 @@
                 <p class="card-subtitle">Accesse sua conta</p>
             </div>
             <div class="p-a-2">
-                <form action="{{ url('logar') }}" method="post">
+                <form action="{{ route('logar') }}" method="post">
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <input type="email" name="email" class="form-control" placeholder="Email Address">
@@ -70,6 +70,5 @@
         </div>
     </div>
 </div>
-<script src="{{ elixir('js/login.js') }}"></script>
 </body>
 </html>
