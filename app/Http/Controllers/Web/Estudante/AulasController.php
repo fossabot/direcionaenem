@@ -9,5 +9,8 @@ use App\Http\Controllers\Controller;
 
 class AulasController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('estudante.aulas.index');
+    }
 }

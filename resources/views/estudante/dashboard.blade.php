@@ -157,7 +157,7 @@
                         <div class="media m-b-0">
                             <div class="media-left media-middle">
                                 <a href="#">
-                                    <img src="assets/images/people/110/guy-9.jpg" alt="Guy" width="40"
+                                    <img src="http://lorempixel.com/100/100" alt="Guy" width="40"
                                          class="img-circle">
                                 </a>
                             </div>
@@ -177,7 +177,7 @@
                         <div class="media m-b-0">
                             <div class="media-left media-middle">
                                 <a href="#">
-                                    <img src="assets/images/people/110/guy-5.jpg" alt="Guy" width="40"
+                                    <img src="http://lorempixel.com/100/100" alt="Guy" width="40"
                                          class="img-circle">
                                 </a>
                             </div>
@@ -197,7 +197,7 @@
                         <div class="media m-b-0">
                             <div class="media-left media-middle">
                                 <a href="#">
-                                    <img src="assets/images/people/110/woman-5.jpg" alt="Guy" width="40"
+                                    <img src="http://lorempixel.com/100/100" alt="Guy" width="40"
                                          class="img-circle">
                                 </a>
                             </div>

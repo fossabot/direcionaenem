@@ -9,5 +9,8 @@ use App\Http\Controllers\Controller;
 
 class MensagensController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('estudante.mensagens.index');
+    }
 }
