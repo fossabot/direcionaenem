@@ -15,7 +15,7 @@
 <nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
     <button class="navbar-toggler pull-xs-left" type="button" data-toggle="sidebar" data-target="#sidebarLeft"><span
                 class="material-icons">menu</span></button>
-    <a href="index.html" class="navbar-brand"><i class="material-icons">school</i> DirecionaEnem</a>
+    <a href="{{ route('estudante.dashboard') }}" class="navbar-brand"><i class="material-icons">school</i> DirecionaEnem</a>
 
     <ul class="nav navbar-nav pull-xs-right">
 
@@ -26,10 +26,10 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-menu-list" aria-labelledby="Preview">
                 <a class="dropdown-item" href="account-edit.html"><i class="material-icons md-18">lock</i> <span
-                            class="icon-text">Edit Account</span></a>
+                            class="icon-text">Minha Conta</span></a>
                 <a class="dropdown-item" href="profile.html"><i class="material-icons md-18">person</i> <span
                             class="icon-text">Public Profile</span></a>
-                <a class="dropdown-item" href="login.html">Logout</a>
+                <a class="dropdown-item" href="{{ route('deslogar') }}">Deslogar-se</a>
             </div>
         </li>
 

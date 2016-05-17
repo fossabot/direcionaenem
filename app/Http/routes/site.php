@@ -12,5 +12,8 @@ Route::group(['namespace' => 'App\Http\Controllers\Web\Site'], function () {
         ]);
     });
     Route::get('login/face', 'LoginController@facebook');
-    Route::get('deslogar', 'LoginController@deslogar');
+    Route::get('deslogar', [
+        'as'   => 'deslogar',
+        'uses' => 'LoginController@deslogar'
+    ]);
 });
