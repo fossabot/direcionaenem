@@ -2,7 +2,7 @@
 @section('content')
     <ol class="breadcrumb">
         <li>
-            <a href="{{ route('estudante.dashboard') }}">
+            <a href="{{ url('inicio') }}">
                 Início
             </a>
         </li>

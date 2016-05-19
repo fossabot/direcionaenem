@@ -14,7 +14,7 @@
                 menu
             </span>
     </button>
-    <a class="navbar-brand" href="{{ route('estudante.dashboard') }}">
+    <a class="navbar-brand" href="{{ url('inicio') }}">
         <i class="material-icons">
             school
         </i>
@@ -62,7 +62,7 @@
                         Fale Conosco
                     </span>
                 </a>
-                <a class="dropdown-item" href="{{ route('deslogar') }}">
+                <a class="dropdown-item" href="{{ url('deslogar') }}">
                     <i class="material-icons md-18">
                         exit_to_app
                     </i>
@@ -100,15 +100,15 @@
     </div>
     <ul class="sidebar-menu">
         <li class="sidebar-menu-item {{ set_active('inicio') }}">
-            <a class="sidebar-menu-button" href="{{ route('estudante.dashboard') }}">
+            <a class="sidebar-menu-button" href="{{ url('inicio') }}">
                 <i class="sidebar-menu-icon material-icons">
                     dashboard
                 </i>
-                InÃ­cio
+                Início
             </a>
         </li>
         <li class="sidebar-menu-item {{ set_active('metas') }}">
-            <a class="sidebar-menu-button" href="{{ route('estudante.metas') }}">
+            <a class="sidebar-menu-button" href="{{ url('metas') }}">
                 <i class="sidebar-menu-icon material-icons">
                     insert_chart
                 </i>
@@ -116,7 +116,7 @@
             </a>
         </li>
         <li class="sidebar-menu-item {{ set_active('aulas') }}">
-            <a class="sidebar-menu-button" href="{{ route('estudante.aulas') }}">
+            <a class="sidebar-menu-button" href="{{ url('aulas') }}">
                 <i class="sidebar-menu-icon material-icons">
                     school
                 </i>
@@ -124,7 +124,7 @@
             </a>
         </li>
         <li class="sidebar-menu-item {{ set_active('desempenho') }}">
-            <a class="sidebar-menu-button" href="{{ route('estudante.desempenho') }}">
+            <a class="sidebar-menu-button" href="{{ url('desempenho') }}">
                 <i class="sidebar-menu-icon material-icons">
                     trending_up
                 </i>
@@ -132,7 +132,7 @@
             </a>
         </li>
         <li class="sidebar-menu-item {{ set_active('mensagens') }}">
-            <a class="sidebar-menu-button" href="{{ route('estudante.mensagens') }}">
+            <a class="sidebar-menu-button" href="{{ url('mensagens') }}">
                 <i class="sidebar-menu-icon material-icons">
                     comment
                 </i>
@@ -140,7 +140,7 @@
             </a>
         </li>
         <li class="sidebar-menu-item {{ set_active('contato') }}">
-            <a class="sidebar-menu-button" href="{{ route('estudante.contato') }}">
+            <a class="sidebar-menu-button" href="{{ url('contato') }}">
                 <i class="sidebar-menu-icon material-icons">
                     settings_phone
                 </i>

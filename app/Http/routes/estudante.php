@@ -7,10 +7,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Web\Estudante'], function () 
     });
 
     Route::group(['middleware' => 'auth'], function () {
-        Route::get('inicio', [
-            'as'   => 'estudante.dashboard',
-            'uses' => 'DashboardController@index'
-        ]);
+        Route::get('inicio', 'DashboardController@index');
         Route::get('editar-conta', 'DashboardController@index');
         Route::get('cadastrar', 'CadastroController@index');
         Route::get('metas', 'MetasController@index');
