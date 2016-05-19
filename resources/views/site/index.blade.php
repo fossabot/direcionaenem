@@ -73,7 +73,7 @@
 				<!-- Start Navigation Menu -->
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right" id="main_navigation_menu">
-						<li class="link-inicio"><a href="#header"> Login</a></li>
+						<li class="link-inicio"><a href="{{ url('/login') }}"> Login</a></li>
 						<li class="link-trial"><a href="#header"><i class="fa fa-share"></i> Experimente 15 dias grátis!</a></li>
 						<li>
 							<a href="#" class="navexpander nav-expander fixed"><i class="fa fa-bars fa-2x"></i></a>

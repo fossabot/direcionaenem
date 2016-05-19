@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>DirecionaConcursos :: Login</title>
     <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
           rel="stylesheet">
     <link type="text/css" href="{{ elixir('css/all.css') }}" rel="stylesheet">
-
 </head>
 
 <body class="login">
@@ -47,17 +46,18 @@
                             <small>Esqueceu a senha?</small>
                         </a>
                     </div>
-                    <form action="{{ url('login/face') }}">
-                        <button type="submit" class="btn btn-primary btn-circle-large">
-                            f
+                    
+                    <!-- <form action="{{ url('login/face') }}">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-facebook"></i>
                         </button>
                     </form>
 
                     <form action="{{ url('login/google') }}">
-                        <button type="submit" class="btn btn-danger btn-circle-large">
-                            g+
+                        <button type="submit" class="btn btn-danger ">
+                            <i class="fa fa-google-plus"></i>
                         </button>
-                    </form>
+                    </form> -->
 
                     @if($errors->has())
                         <div class="alert alert-danger center">{{ $errors->first() }}</div>
