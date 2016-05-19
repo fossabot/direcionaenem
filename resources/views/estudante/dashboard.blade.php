@@ -1,154 +1,63 @@
 @extends('layout')
-
 @section('content')
     <ol class="breadcrumb">
-        <li><a class="active" href="{{ url('/') }}">Início</a></li>
+        <li>
+            <a href="{{ route('estudante.dashboard') }}">
+                Início
+            </a>
+        </li>
+        <li class="active">
+            Área do Aluno
+        </li>
     </ol>
-    <div class="row">
-        <div class="col-md-7">
-            <div class="card">
-                <div class="card-header bg-white">
-                    <div class="media">
-                        <div class="media-body">
-                            <h4 class="card-title">Courses</h4>
-                            <p class="card-subtitle">Your recent courses</p>
-                        </div>
-                        <div class="media-right media-middle">
-                            <a class="btn btn-white" href="#"> View All</a>
-                        </div>
-                    </div>
+    <div class="card card-stats-primary">
+        <div class="card-block">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <i class="material-icons text-muted-light">
+                        credit_card
+                    </i>
                 </div>
-                <ul class="list-group list-group-fit m-b-0">
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body media-middle">
-                                <a href="take-course.html">Basics of HTML</a>
-                            </div>
-                            <div class="media-right media-middle">
-                                <div class="center">
-                                    <span class="label label-pill label-primary m-b-05">25%</span>
-                                    <progress class="progress progress-primary m-b-0" value="25" max="100"
-                                              style="width:100px">25%
-                                    </progress>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body media-middle">
-                                <a href="take-course.html">Angular in Steps</a>
-                            </div>
-                            <div class="media-right media-middle">
-                                <div class="center">
-                                    <span class="label label-pill label-success m-b-05">100%</span>
-                                    <progress class="progress progress-success m-b-0" value="100" max="100"
-                                              style="width:100px">100%
-                                    </progress>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body media-middle">
-                                <a href="take-course.html">Bootstrap Foundations</a>
-                            </div>
-                            <div class="media-right media-middle">
-                                <div class="center">
-                                    <span class="label label-pill label-warning m-b-05">80%</span>
-                                    <progress class="progress progress-warning m-b-0" value="80" max="100"
-                                              style="width:100px">80%
-                                    </progress>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="card">
-                <div class="card-header bg-white">
-                    <div class="media">
-                        <div class="media-body">
-                            <h4 class="card-title">Quizzes</h4>
-                            <p class="card-subtitle">Your Performance</p>
-                        </div>
-                        <div class="media-right media-middle">
-                            <a class="btn btn-white" href="#"> View All</a>
-                        </div>
-                    </div>
+                <div class="media-body media-middle">
+                    Sua inscrição expira em
+                    <strong>
+                        26 de Junho de 2016
+                    </strong>
                 </div>
-                <ul class="list-group list-group-fit m-b-0">
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body media-middle">
-                                <div>
-                                    <a href="take-quiz.html">Title of quiz goes here?</a>
-                                </div>
-                                <small class="text-light">Course: <a href="view-course.html">Basics of HTML</a></small>
-                            </div>
-                            <div class="media-right center">
-                                <h4 class=" m-b-0">5.8</h4>
-                                <span class="text-muted-light">Good</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body media-middle">
-                                <div>
-                                    <a href="take-quiz.html">Directives &amp; Routing</a>
-                                </div>
-                                <small class="text-light">Course: <a href="view-course.html">Angular in Steps</a>
-                                </small>
-                            </div>
-                            <div class="media-right center">
-                                <h4 class=" m-b-0 text-success">9.8</h4>
-                                <span class="text-muted-light">Great</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media">
-                            <div class="media-body media-middle">
-                                <div><a href="take-quiz.html">Responsive &amp; Retina</a></div>
-                                <small class="text-light">Course: <a href="view-course.html">Bootstrap Foundations</a>
-                                </small>
-                            </div>
-                            <div class="media-right center">
-                                <h4 class=" m-b-0 text-danger">2.8</h4>
-                                <span class="text-muted-light">Failed</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                <div class="media-right">
+                    <a class="btn btn-success btn-rounded" href="pay.html">
+                        <i class="material-icons">
+                            autorenew
+                        </i>
+                        Renovar Plano
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="col-md-5">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-white">
-                    <h4 class="card-title">Rewards</h4>
-                    <p class="card-subtitle">Your latest achievements</p>
-                </div>
-                <div class="card-block center">
-                    <div class="btn btn-primary btn-circle"><i class="material-icons">thumb_up</i></div>
-                    <div class="btn btn-danger btn-circle"><i class="material-icons">grade</i></div>
-                    <div class="btn btn-success btn-circle"><i class="material-icons">bubble_chart</i></div>
-                    <div class="btn btn-warning btn-circle"><i class="material-icons">keyboard_voice</i></div>
-                    <div class="btn btn-info btn-circle"><i class="material-icons">event_available</i></div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header bg-white">
+                <div class="card-header bg-faded">
                     <div class="media">
                         <div class="media-body media-middle">
-                            <h4 class="card-title">Forum Activity</h4>
-                            <p class="card-subtitle">Latest forum topics &amp; comments</p>
+                            <h4 class="card-title">
+                                <i class="material-icons md-36">
+                                    rss_feed
+                                </i>
+                                Newsfeed |
+                                <small>
+                                    Fique por dentro!
+                                </small>
+                            </h4>
                         </div>
                         <div class="media-right media-middle">
-                            <a class="btn btn-white" href="forum.html"> <i
-                                        class="material-icons">keyboard_arrow_right</i></a>
+                            <a class="btn btn-white" href="#">
+                                <i class="material-icons">
+                                    open_in_new
+                                </i>
+                                Ver todos feeds
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -157,59 +66,27 @@
                         <div class="media m-b-0">
                             <div class="media-left media-middle">
                                 <a href="#">
-                                    <img src="http://lorempixel.com/100/100" alt="Guy" width="40"
-                                         class="img-circle">
+                                    <img alt="Guy" class="img-perfil" src="{{ asset('assets/img/perfil/estudante/1.jpg') }}" width="100">
+                                    </img>
                                 </a>
                             </div>
                             <div class="media-body media-middle">
                                 <p class="m-b-0">
-                                    <a href="forum-thread.html">Can someone help me with the basic Setup?</a>
-                                    <br>
+                                    <a href="forum-thread.html">
+                                        Enem 2016 já tem mais de 5 milhões de inscritos!
+                                    </a>
                                 </p>
                                 <p class="m-b-0">
-                                    <small>by: <a href="#">Adrian D.</a></small>
+                                    <small>
+                                        Fonte:
+                                        <a href="#">
+                                            Globo.com
+                                        </a>
+                                    </small>
                                 </p>
-                                <small class="text-muted-light">5 min ago</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media m-b-0">
-                            <div class="media-left media-middle">
-                                <a href="#">
-                                    <img src="http://lorempixel.com/100/100" alt="Guy" width="40"
-                                         class="img-circle">
-                                </a>
-                            </div>
-                            <div class="media-body media-middle">
-                                <p class="m-b-0">
-                                    <a href="forum-thread.html">Great work Guys. How do I create a Sidebar?</a>
-                                    <br>
-                                </p>
-                                <p class="m-b-0">
-                                    <small>by: <a href="#">Andrew B.</a></small>
-                                </p>
-                                <small class="text-muted-light">1 day ago</small>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="media m-b-0">
-                            <div class="media-left media-middle">
-                                <a href="#">
-                                    <img src="http://lorempixel.com/100/100" alt="Guy" width="40"
-                                         class="img-circle">
-                                </a>
-                            </div>
-                            <div class="media-body media-middle">
-                                <p class="m-b-0">
-                                    <a href="forum-thread.html">Looking for the Best</a>
-                                    <br>
-                                </p>
-                                <p class="m-b-0">
-                                    <small>by: <a href="#">Michelle S.</a></small>
-                                </p>
-                                <small class="text-muted-light">2 days ago</small>
+                                <small class="text-muted-light">
+                                    5 minutos atrás
+                                </small>
                             </div>
                         </div>
                     </li>
@@ -217,5 +94,42 @@
             </div>
         </div>
     </div>
-
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-faded">
+                <div class="media">
+                    <div class="media-body media-middle">
+                        <h4 class="card-title">
+                            <i class="material-icons md-36">
+                                insert_chart
+                            </i>
+                            Metas Novas
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-block">
+                <div id="donut" style="width: 100%; height:230px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-faded">
+                <div class="media">
+                    <div class="media-body media-middle">
+                        <h4 class="card-title">
+                            <i class="material-icons md-36">
+                                trending_up
+                            </i>
+                            Desempenho
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

@@ -274,7 +274,7 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     color: #373a3c;
-    background-color: #f9f9f9
+    background-color: #FFF;
 }
 
 [tabindex="-1"]:focus {
@@ -5436,7 +5436,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 html.bootstrap-layout, html.bootstrap-layout body {
     position: relative;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 html.bootstrap-layout .layout-content {
@@ -8898,6 +8898,33 @@ input.switch-toggle-round-flat:checked + label:after {
 .forum-thread a.forum-thread-user:hover img {
     opacity: .7
 }
+
+/*======================= Style Direciona =========================*/
+
+.img-perfil {
+    padding: 2px;
+}
+
+.divider-vertical {
+height: 40px;
+margin: 0 9px;
+border-left: 1px solid #1d84d3;
+border-right: 1px solid #1d84d3;
+}
+
+.nav-link2 {
+    color: #FFF;
+}
+
+.sidebar-white-md {
+    background-color: #f9f9f9;
+}
+
+.navbar-brand {
+    font-size: 20px;
+}
+
+
 
 /*# sourceMappingURL=style.min.css.map */
 

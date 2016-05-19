@@ -8899,4 +8899,13 @@ input.switch-toggle-round-flat:checked + label:after {
     opacity: .7
 }
 
+/*======================= Style Direciona =========================*/
+
+.img-perfil {
+    border:1px solid #FFF;
+}
+
+
+
+
 /*# sourceMappingURL=style.min.css.map */
