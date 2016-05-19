@@ -18,7 +18,7 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect(route(auth()->user()->papel . '.dashboard'));
+            return redirect(url('inicio'));
         }
 
         return $next($request);

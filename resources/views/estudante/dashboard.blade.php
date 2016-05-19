@@ -2,7 +2,7 @@
 
 @section('content')
     <ol class="breadcrumb">
-        <li><a class="active" href="{{ route('estudante.dashboard') }}">Início</a></li>
+        <li><a class="active" href="{{ url('/') }}">Início</a></li>
     </ol>
     <div class="row">
         <div class="col-md-7">

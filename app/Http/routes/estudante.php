@@ -1,35 +1,22 @@
 <?php
 
-Route::group(['as'         => 'estudante.',
-              'middleware' => 'auth',
-              'namespace'  => 'App\Http\Controllers\Web\Estudante'], function () {
-    Route::get('inicio', [
-        'as'   => 'dashboard',
-        'uses' => 'DashboardController@index'
-    ]);
-    Route::get('cadastrar', [
-        'as'   => 'cadastrar',
-        'uses' => 'CadastroController@index'
-    ]);
-    Route::get('metas', [
-        'as'   => 'metas',
-        'uses' => 'MetasController@index'
-    ]);
-    Route::get('aulas', [
-        'as'   => 'aulas',
-        'uses' => 'AulasController@index'
-    ]);
-    Route::get('desempenho', [
-        'as'   => 'desempenho',
-        'uses' => 'DesempenhoController@index'
-    ]);
-    Route::get('mensagens', [
-        'as'   => 'mensagens',
-        'uses' => 'MensagensController@index'
-    ]);
-    Route::get('contato', [
-        'as'   => 'contato',
-        'uses' => 'ContatoController@index'
-    ]);
+Route::group(['namespace' => 'App\Http\Controllers\Web\Estudante'], function () {
+    Route::group(['middleware' => 'guest'], function () {
+        Route::get('login', 'LoginController@index');
+        Route::post('login', 'LoginController@check');
+    });
 
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('inicio', [
+            'as'   => 'estudante.dashboard',
+            'uses' => 'DashboardController@index'
+        ]);
+        Route::get('cadastrar', 'CadastroController@index');
+        Route::get('metas', 'MetasController@index');
+        Route::get('aulas', 'AulasController@index');
+        Route::get('desempenho', 'DesempenhoController@index');
+        Route::get('mensagens', 'MensagensController@index');
+        Route::get('contato', 'ContatoController@index');
+        Route::get('deslogar', 'LoginController@logout');
+    });
 });

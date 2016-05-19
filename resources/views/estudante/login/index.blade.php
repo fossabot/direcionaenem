@@ -11,11 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
           rel="stylesheet">
     <link type="text/css" href="{{ elixir('css/all.css') }}" rel="stylesheet">
-
 </head>
-
 <body class="login">
-
 <div class="row">
     <div class="col-sm-8 col-sm-push-1 col-md-4 col-md-push-4 col-lg-4 col-lg-push-4">
         <div class="center m-a-2">
@@ -29,7 +26,7 @@
                 <p class="card-subtitle">Accesse sua conta</p>
             </div>
             <div class="p-a-2">
-                <form action="{{ route('logar') }}" method="post">
+                <form action="{{ url('login') }}" method="post">
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <input type="email" name="email" class="form-control" placeholder="Email Address">
@@ -65,7 +62,7 @@
                 </form>
             </div>
             <div class="card-footer center bg-white">
-                Ainda não está cadastrado? <a href="{{ route('estudante.cadastrar') }}">Cadastre-se</a>
+                Ainda não está cadastrado? <a href="{{ url('/cadastrar') }}">Cadastre-se</a>
             </div>
         </div>
     </div>

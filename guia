@@ -1,7 +1,33 @@
+Pra hoje e amanhã (18/05 e 19/05):
+
+Login (Estudante | Instrutor | Admin)
+
+[] Logar
+[] Lembrar-me (Auth::viaRemember())
+[] Ver mensagem de erro ao (não colocar usuario|não colocar senha|colocar senha errada)
+[] Verificar se logado sou redirecionado a página inicial
+
+Admin
+[] Criar instrutor
+[] Editar cadastro do instrutor
+[] Desativar instrutor
+[] Visualizar assinaturas feitas
+
+Instrutor:
+[] Criar meta
+[] Editar meta
+[] Desistir da meta
+[] Criar exercício
+[] Editar exercício
+[] Excluir exercício
+[] Adicionar matéria
+[] Editar matéria
+[] Excluir matéria
+
 Contras
 
 - O material de apoio é baixado em outro site
-- Reclamaram em comentarios que eles editam as aulas
+- Reclamaram em comentários que eles editam as aulas
 
  Fazer
 
@@ -17,8 +43,8 @@ Contras
 
 Sugestões
 
-- Assuntos relacionados (Historia com filosofia, sociologia, etc...)
-- Assistir depois
+- Assuntos relacionados (Historia com filosofia, sociologia, etc... palavras parecidas)
+- Assistir depois...
 - Guardar o momento em que o video foi parado para lembrar depois
 - Ler dicas de estudo e pensar em como aplicar na plataforma
-- Exibir notificacao para o cara renovar no topo das telas, conforme ideia do template original
+- Exibir notificação para o cara renovar no topo das telas, conforme ideia do template original
