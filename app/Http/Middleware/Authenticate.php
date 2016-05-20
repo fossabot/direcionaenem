@@ -20,8 +20,18 @@ class Authenticate
         if (Auth::guard($guard)->guest()) {
             if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);
-            } else {
-                return redirect()->guest('login');
+            }
+            else {
+                switch ($guard) {
+                    case 'estudante':
+                        return redirect()->guest('inicio');
+
+                    case 'admin':
+                        return redirect()->guest('admin/inicio');
+
+                    case 'instrutor':
+                        return redirect()->guest('instrutor/inicio');
+                }
             }
         }
 
