@@ -66,6 +66,20 @@ return [
             'engine'    => null,
         ],
 
+        'testing' => [
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'port'      => '3306',
+            'database'  => 'direcionaenem_testing',
+            'username'  => 'root',
+            'password'  => 'q1w2r4e3',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+            'engine'    => null,
+        ],
+
         'pgsql' => [
             'driver'   => 'pgsql',
             'host'     => env('DB_HOST', 'localhost'),

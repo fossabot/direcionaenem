@@ -1,22 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Web\Estudante;
+namespace App\Http\Controllers\Web\Admin;
 
 use App\Http\Controllers\Web\LoginActions;
+use Illuminate\Http\Request;
+
 use App\Http\Requests;
-use Auth;
 use App\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {
-    protected $redirectPage = '/inicio';
-    protected $redirectAfterLogout = '/login';
-
     use LoginActions;
+
+    protected $redirectPage = 'admin/inicio';
 
     public function index()
     {
-        return view('estudante.login.index');
+        return view('admin.login.index');
     }
 
 }

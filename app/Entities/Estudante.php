@@ -2,6 +2,7 @@
 
 namespace App\Entities;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Estudante extends Usuario
@@ -13,7 +14,7 @@ class Estudante extends Usuario
         parent::boot();
 
         static::addGlobalScope('estudante', function (Builder $builder) {
-            $builder->where('role', '=', 'estudante');
+            $builder->where('papel', '<>', 'estudante');
         });
     }
 }

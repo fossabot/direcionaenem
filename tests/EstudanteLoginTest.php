@@ -5,7 +5,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class EstudanteLoginTest extends TestCase
 {
-//    use DatabaseTransactions;
+    use DatabaseTransactions;
 
     /**
      * @test
@@ -25,6 +25,5 @@ class EstudanteLoginTest extends TestCase
         ])->seePageIs('inicio');
     }
 
-    
 
 }

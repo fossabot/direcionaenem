@@ -2,18 +2,19 @@
 
 namespace App\Entities;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class Instrutor extends Usuario
 {
-    protected $table = 'users';
+    protected $table = 'usuarios';
 
     protected static function boot()
     {
         parent::boot();
 
         static::addGlobalScope('instrutor', function (Builder $builder) {
-            $builder->where('role', '=', 'instrutor');
+            $builder->where('papel', '=', 'instrutor');
         });
     }
 }
