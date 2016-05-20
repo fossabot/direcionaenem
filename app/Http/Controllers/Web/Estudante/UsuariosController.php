@@ -28,4 +28,5 @@ class UsuariosController extends Controller
     {
     	return view('estudante.usuarios.fale-conosco');
     }
+
 }
