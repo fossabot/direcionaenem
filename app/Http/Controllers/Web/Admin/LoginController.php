@@ -13,6 +13,7 @@ class LoginController extends Controller
     use LoginActions;
 
     protected $redirectPage = 'admin/inicio';
+    protected $guard = 'admin';
 
     public function index()
     {

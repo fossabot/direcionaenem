@@ -13,7 +13,7 @@ trait LoginActions
             'senha' => 'required'
         ]);
 
-        if (auth()->attempt(['email' => $request->get('email'), 'password' => $request->get('senha')], true)) {
+        if (auth()->guard($this->guard)->attempt(['email' => $request->get('email'), 'password' => $request->get('senha')], true)) {
             return redirect()->to($this->redirectPage);
         }
 
@@ -24,7 +24,7 @@ trait LoginActions
 
     public function logout()
     {
-        auth()->logout();
+        auth()->guard($this->guard)->logout();
 
         return redirect()->to($this->redirectAfterLogout);
     }

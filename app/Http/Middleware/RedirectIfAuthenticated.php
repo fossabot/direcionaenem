@@ -18,7 +18,16 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect(url('inicio'));
+            switch ($guard) {
+                case 'estudante':
+                    return redirect(url('inicio'));
+
+                case 'admin':
+                    return redirect(url('admin/inicio'));
+
+                case 'instrutor':
+                    return redirect(url('instrutor/inicio'));
+            }
         }
 
         return $next($request);

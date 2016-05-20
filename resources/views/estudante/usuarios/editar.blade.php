@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title')
-Editar Conta - Dashboard
+    Editar Conta - Dashboard
 @endsection
 @section('content')
 <ol class="breadcrumb">
@@ -60,11 +60,11 @@ Editar Conta - Dashboard
                     <div class="col-sm-8">
                         <div class="row">
                             <div class="col-md-6">
-                                <input class="form-control" placeholder="First Name" type="text" value=" {{ auth()->user()->nome }}">
+                                <input class="form-control" placeholder="First Name" type="text" value=" {{ auth()->guard('estudante')->user()->nome }}">
                             </input>
                         </div>
                         <div class="col-md-6">
-                            <input class="form-control" placeholder="Last Name" type="text" value=" {{ auth()->user()->sobrenome }}">
+                            <input class="form-control" placeholder="Last Name" type="text" value=" {{ auth()->guard('estudante')->user()->sobrenome }}">
                         </input>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ Editar Conta - Dashboard
                             mail
                         </i>
                     </span>
-                    <input class="form-control" disabled="" placeholder="Email Address" type="text" value=" {{ auth()->user()->email }}">
+                    <input class="form-control" disabled="" placeholder="Email Address" type="text" value=" {{ auth()->guard('estudante')->user()->email }}">
                 </input>
             </div>
         </div>

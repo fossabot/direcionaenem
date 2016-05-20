@@ -36,9 +36,19 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'estudante' => [
             'driver'   => 'session',
-            'provider' => 'users',
+            'provider' => 'estudante',
+        ],
+
+        'instrutor' => [
+            'driver'   => 'session',
+            'provider' => 'instrutor',
+        ],
+
+        'admin' => [
+            'driver'   => 'session',
+            'provider' => 'admin',
         ],
 
         'api' => [
@@ -65,15 +75,20 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'estudante' => [
             'driver' => 'eloquent',
-            'model'  => App\Entities\Usuario::class,
+            'model'  => App\Entities\Estudante::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'instrutor' => [
+            'driver' => 'eloquent',
+            'model'  => App\Entities\Instrutor::class,
+        ],
+
+        'admin' => [
+            'driver' => 'eloquent',
+            'table'  => App\Entities\Admin::class,
+        ],
     ],
 
     /*
@@ -96,9 +111,23 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'email'    => 'auth.emails.password',
+        'estudante' => [
+            'provider' => 'estudante',
+            'email'    => 'estudantes.emails.password',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
+        'instrutor' => [
+            'provider' => 'instrutor',
+            'email'    => 'instrutores.emails.password',
+            'table'    => 'password_resets',
+            'expire'   => 60,
+        ],
+
+        'admin' => [
+            'provider' => 'admin',
+            'email'    => 'admin.emails.password',
             'table'    => 'password_resets',
             'expire'   => 60,
         ],

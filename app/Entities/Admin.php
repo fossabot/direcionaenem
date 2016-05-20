@@ -2,18 +2,9 @@
 
 namespace App\Entities;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Admin extends Usuario
+class Admin extends Authenticatable
 {
-    protected $table = 'usuarios';
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::addGlobalScope('admin', function (Builder $builder) {
-            $builder->where('role', '=', 'admin');
-        });
-    }
+    
 }

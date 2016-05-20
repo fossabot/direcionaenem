@@ -27,7 +27,7 @@
                 <img alt="Avatar" class="img-thumbnail img-perfil"
                      src="{{ asset('assets/img/perfil/estudante/1.jpg') }}" width="40">
                 </img>
-                {{ auth()->user()->nome }}
+                {{ auth()->guard('estudante')->user()->nome }}
             </a>
             <div aria-labelledby="Preview" class="dropdown-menu dropdown-menu-right dropdown-menu-list">
                 <a class="dropdown-item" href="{{ url('/minha-conta') }}">

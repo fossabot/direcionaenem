@@ -3,11 +3,11 @@
 Route::group(['as'        => 'admin.',
               'prefix'    => 'admin',
               'namespace' => 'App\Http\Controllers\Web\Admin'], function () {
-    Route::group(['middleware' => 'guest'], function () {
+    Route::group(['middleware' => 'guest:admin'], function () {
         Route::get('login', 'LoginController@index');
         Route::post('login', 'LoginController@check');
     });
-    Route::group(['middleware' => 'auth'], function () {
+    Route::group(['middleware' => 'auth:admin'], function () {
         Route::get('inicio', 'DashboardController@index');
         Route::get('estudantes', 'EstudantesController@index');
         Route::get('instrutores', 'InstrutoresController@index');

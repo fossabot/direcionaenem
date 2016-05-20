@@ -2,19 +2,9 @@
 
 namespace App\Entities;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Estudante extends Usuario
+class Estudante extends Authenticatable
 {
-    protected $table = 'usuarios';
-
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::addGlobalScope('estudante', function (Builder $builder) {
-            $builder->where('papel', '<>', 'estudante');
-        });
-    }
+    
 }

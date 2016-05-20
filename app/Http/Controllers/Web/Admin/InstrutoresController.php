@@ -21,6 +21,6 @@ class InstrutoresController extends Controller
     {
         $instrutor = Instrutor::find($id);
 
-        return view('admin.instrutores.editar');
+        return view('admin.instrutores.editar', compact('instrutor'));
     }
 }

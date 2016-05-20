@@ -11,6 +11,7 @@ class LoginController extends Controller
 {
     protected $redirectPage = '/inicio';
     protected $redirectAfterLogout = '/login';
+    protected $guard = 'estudante';
 
     use LoginActions;
 

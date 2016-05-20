@@ -1,12 +1,12 @@
 <?php
 
 Route::group(['namespace' => 'App\Http\Controllers\Web\Estudante'], function () {
-    Route::group(['middleware' => 'guest'], function () {
+    Route::group(['middleware' => 'guest:estudante'], function () {
         Route::get('login', 'LoginController@index');
         Route::post('login', 'LoginController@check');
     });
 
-    Route::group(['middleware' => 'auth'], function () {
+    Route::group(['middleware' => 'auth:estudante'], function () {
         Route::get('inicio', 'DashboardController@index');
         Route::get('minha-conta', 'UsuariosController@editar');
         Route::get('ver-perfil', 'UsuariosController@index');
