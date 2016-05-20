@@ -1,4 +1,7 @@
 @extends('layout')
+@section('title')
+Editar Conta - Dashboard
+@endsection
 @section('content')
 <ol class="breadcrumb">
     <li>
