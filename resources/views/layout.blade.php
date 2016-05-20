@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard</title>
+    <title>@yield('title', 'Dashboard - Direciona Enem')</title>
     <link href="{{ asset('css/all.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body class="layout-container ls-top-navbar si-l3-md-up">
@@ -30,7 +30,7 @@
                 {{ auth()->user()->nome }}
             </a>
             <div aria-labelledby="Preview" class="dropdown-menu dropdown-menu-right dropdown-menu-list">
-                <a class="dropdown-item" href="{{ url('/editarconta') }}">
+                <a class="dropdown-item" href="{{ url('/minha-conta') }}">
                     <i class="material-icons md-18">
                         account_box
                     </i>
@@ -38,7 +38,7 @@
                         Minha Conta
                     </span>
                 </a>
-                <a class="dropdown-item" href="profile.html">
+                <a class="dropdown-item" href="{{ url('/ver-perfil') }}">
                     <i class="material-icons md-18">
                         account_circle
                     </i>
@@ -46,7 +46,7 @@
                         Ver Perfil
                     </span>
                 </a>
-                <a class="dropdown-item" href="profile.html">
+                <a class="dropdown-item" href="{{ url('/ajuda') }}">
                     <i class="material-icons md-18">
                         help
                     </i>
@@ -54,7 +54,7 @@
                         Ajuda
                     </span>
                 </a>
-                <a class="dropdown-item" href="profile.html">
+                <a class="dropdown-item" href="{{ url('/fale-conosco') }}">
                     <i class="material-icons md-18">
                         chat
                     </i>
@@ -131,7 +131,7 @@
                 Meu Desempenho
             </a>
         </li>
-        <li class="sidebar-menu-item {{ set_active('mensagens') }}">
+        <!-- <li class="sidebar-menu-item {{ set_active('mensagens') }}">
             <a class="sidebar-menu-button" href="{{ url('mensagens') }}">
                 <i class="sidebar-menu-icon material-icons">
                     comment
@@ -146,7 +146,7 @@
                 </i>
                 Contato
             </a>
-        </li>
+        </li> -->
     </ul>
 </div>
 <div class="layout-content" data-scrollable="">

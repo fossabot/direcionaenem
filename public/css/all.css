@@ -3007,7 +3007,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .file-custom::after {
-    content: "Choose file..."
+    content: "Escolher arquivo ..."
 }
 
 .file-custom::before {
@@ -3015,7 +3015,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
     bottom: -.075rem;
     z-index: 6;
     display: block;
-    content: "Browse";
+    content: "Procurar";
     background-color: #eee;
     border: 1px solid #ddd;
     border-radius: 0 .25rem .25rem 0
@@ -8903,6 +8903,12 @@ input.switch-toggle-round-flat:checked + label:after {
 
 .img-perfil {
     padding: 2px;
+}
+
+.img-perfil2 {
+    padding: 4px;
+    border-radius: 5px;
+    border:1px solid #DDD;
 }
 
 .divider-vertical {
