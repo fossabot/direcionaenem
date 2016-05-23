@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title')
-    Editar Conta - Dashboard
+    Perfil - Direciona Enem Dashboard
 @endsection
 @section('content')
     <ol class="breadcrumb">

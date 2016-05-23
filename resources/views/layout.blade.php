@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title', 'Dashboard - Direciona Enem')</title>
+    <title>@yield('title', 'Direciona Enem - Dashboard Início')</title>
     <link href="{{ asset('css/all.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body class="layout-container ls-top-navbar si-l3-md-up">
@@ -72,15 +72,17 @@
         </li>
     </ul>
     <ul class="nav navbar-nav pull-xs-right hidden-sm-down">
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <i class="sidebar-menu-icon material-icons">
                 home
             </i>
         </li>
         <li class="nav-item">
-            <i class="sidebar-menu-icon material-icons">
-                email
-            </i>
+            <a href="">
+                <i class="sidebar-menu-icon material-icons">
+                    email
+                </i>
+            </a>
         </li>
         <li class="nav-item">
             <i class="sidebar-menu-icon material-icons">
@@ -90,7 +92,7 @@
         <li class="nav-item">
             <span class="divider-vertical">
             </span>
-        </li>
+        </li> -->
     </ul>
 </nav>
 <div class="sidebar sidebar-left sidebar-light sidebar-visible-md-up si-si-3 ls-top-navbar-xs-up sidebar-white-md"
@@ -107,6 +109,14 @@
                 Início
             </a>
         </li>
+        <li class="sidebar-menu-item {{ set_active('aulas') }}">
+            <a class="sidebar-menu-button" href="{{ url('aulas') }}">
+                <i class="sidebar-menu-icon material-icons">
+                    school
+                </i>
+                Minhas Aulas
+            </a>
+        </li>
         <li class="sidebar-menu-item {{ set_active('metas') }}">
             <a class="sidebar-menu-button" href="{{ url('metas') }}">
                 <i class="sidebar-menu-icon material-icons">
@@ -115,12 +125,12 @@
                 Minhas Metas
             </a>
         </li>
-        <li class="sidebar-menu-item {{ set_active('aulas') }}">
-            <a class="sidebar-menu-button" href="{{ url('aulas') }}">
+        <li class="sidebar-menu-item {{ set_active('desempenho') }}">
+            <a class="sidebar-menu-button" href="{{ url('desempenho') }}">
                 <i class="sidebar-menu-icon material-icons">
-                    school
+                    border_color
                 </i>
-                Minhas Aulas
+                Minhas Redações
             </a>
         </li>
         <li class="sidebar-menu-item {{ set_active('desempenho') }}">
@@ -131,15 +141,15 @@
                 Meu Desempenho
             </a>
         </li>
-        <!-- <li class="sidebar-menu-item {{ set_active('mensagens') }}">
+        <li class="sidebar-menu-item {{ set_active('mensagens') }}">
             <a class="sidebar-menu-button" href="{{ url('mensagens') }}">
                 <i class="sidebar-menu-icon material-icons">
                     comment
                 </i>
-                Mensagens
+                Minhas Mensagens
             </a>
         </li>
-        <li class="sidebar-menu-item {{ set_active('contato') }}">
+        <!-- <li class="sidebar-menu-item {{ set_active('contato') }}">
             <a class="sidebar-menu-button" href="{{ url('contato') }}">
                 <i class="sidebar-menu-icon material-icons">
                     settings_phone
