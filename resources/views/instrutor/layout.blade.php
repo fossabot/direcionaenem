@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dashboard</title>
-    <link href="{{ asset('css/all.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 </head>
 <body class="layout-container ls-top-navbar si-l3-md-up">
 <nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
@@ -14,11 +15,11 @@
                 menu
             </span>
     </button>
-    <a class="navbar-brand" href="{{ url('admin/inicio') }}">
+    <a class="navbar-brand" href="{{ url('instrutor/inicio') }}">
         <i class="material-icons">
             school
         </i>
-        DirecionaAdmin
+        DirecionaInstrutor
     </a>
     <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item dropdown">
@@ -27,46 +28,20 @@
                 <img alt="Avatar" class="img-thumbnail img-perfil"
                      src="{{ asset('assets/img/perfil/estudante/1.jpg') }}" width="40">
                 </img>
-                {{ auth()->guard('admin')->user()->nome }}
+                {{ auth()->guard('instrutor')->user()->nome }}
             </a>
             <div aria-labelledby="Preview" class="dropdown-menu dropdown-menu-right dropdown-menu-list">
-                <a class="dropdown-item" href="{{ url('/editarconta') }}">
-                    <i class="material-icons md-18">
-                        account_box
-                    </i>
-                    <span class="icon-text">
-                        Minha Conta
-                    </span>
+                <a class="dropdown-item" href="{{ url('/editar-conta') }}">
+                    <i class="material-icons md-18">account_box</i>
+                    <span class="icon-text">Minha Conta</span>
                 </a>
                 <a class="dropdown-item" href="profile.html">
-                    <i class="material-icons md-18">
-                        account_circle
-                    </i>
-                    <span class="icon-text">
-                        Ver Perfil
-                    </span>
+                    <i class="material-icons md-18">account_circle</i>
+                    <span class="icon-text">Ver Perfil</span>
                 </a>
-                <a class="dropdown-item" href="profile.html">
-                    <i class="material-icons md-18">
-                        help
-                    </i>
-                    <span class="icon-text">
-                        Ajuda
-                    </span>
-                </a>
-                <a class="dropdown-item" href="profile.html">
-                    <i class="material-icons md-18">
-                        chat
-                    </i>
-                    <span class="icon-text">
-                        Fale Conosco
-                    </span>
-                </a>
-                <a class="dropdown-item" href="{{ url('deslogar') }}">
-                    <i class="material-icons md-18">
-                        exit_to_app
-                    </i>
-                    Log Out
+                <a class="dropdown-item" href="{{ url('instrutor/deslogar') }}">
+                    <i class="material-icons md-18">exit_to_app</i>
+                    Deslogar
                 </a>
             </div>
         </li>
@@ -99,20 +74,21 @@
         MENU
     </div>
     <ul class="sidebar-menu">
-        <li class="sidebar-menu-item {{ set_active('admin/estudantes') }}">
-            <a class="sidebar-menu-button" href="{{ url('admin/estudantes') }}">
+        <li class="sidebar-menu-item {{ set_active('instrutor/materias') }}">
+            <a class="sidebar-menu-button" href="{{ url('instrutor/materias') }}">
                 <i class="sidebar-menu-icon material-icons">
                     school
                 </i>
-                Estudantes
+                Matérias
             </a>
         </li>
-        <li class="sidebar-menu-item {{ set_active('admin/instrutores') }}">
-            <a class="sidebar-menu-button" href="{{ url('admin/instrutores') }}">
+
+        <li class="sidebar-menu-item {{ set_active('instrutor/metas') }}">
+            <a class="sidebar-menu-button" href="{{ url('instrutor/metas') }}">
                 <i class="sidebar-menu-icon material-icons">
-                    face
+                    insert_chart
                 </i>
-                Instrutores
+                Metas
             </a>
         </li>
     </ul>
@@ -122,7 +98,8 @@
         @yield('content')
     </div>
 </div>
-<script src="{{ elixir('js/app.js') }}">
-</script>
+@section('scripts')
+    <script src="{{ elixir('js/app.js') }}"></script>
+@show
 </body>
 </html>

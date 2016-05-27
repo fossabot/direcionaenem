@@ -28,3 +28,10 @@ $factory->define(App\Entities\Admin::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Entities\Materia::class, function (Faker\Generator $faker) {
+    return [
+        'titulo' => $faker->title,
+        'imagem' => 'teste.png',
+    ];
+});

@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Web\Instrutor;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
-class DashboardController extends Controller
+class MetasController extends Controller
 {
     public function index()
     {
-        return view('instrutor.inicio');
+        return view('instrutor.metas.index');
     }
 }

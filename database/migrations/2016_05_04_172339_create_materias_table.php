@@ -12,7 +12,12 @@ class CreateMateriasTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('materias', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('titulo')->unique();
+            $table->string('imagem');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +27,6 @@ class CreateMateriasTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('materias');
     }
 }

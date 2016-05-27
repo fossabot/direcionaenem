@@ -18,6 +18,7 @@ class CreateEstudantesTable extends Migration
             $table->string('sobrenome');
             $table->string('email')->unique();
             $table->string('password');
+            $table->integer('instrutor_id');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
