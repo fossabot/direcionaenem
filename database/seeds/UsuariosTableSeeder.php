@@ -15,18 +15,19 @@ class UsuariosTableSeeder extends Seeder
      */
     public function run()
     {
-        Estudante::create([
-            'nome'      => 'Estudante',
-            'sobrenome' => 'Estudioso',
-            'email'     => 'estudante@gmail.com',
-            'password'  => bcrypt('q1w2r4e3')
-        ]);
-
-        Instrutor::create([
+        $instrutor = Instrutor::create([
             'nome'      => 'Instrutor',
             'sobrenome' => 'Instruído',
             'email'     => 'instrutor@gmail.com',
             'password'  => bcrypt('q1w2r4e3')
+        ]);
+
+        Estudante::create([
+            'nome'         => 'Estudante',
+            'sobrenome'    => 'Estudioso',
+            'email'        => 'estudante@gmail.com',
+            'instrutor_id' => $instrutor->id,
+            'password'     => bcrypt('q1w2r4e3')
         ]);
 
         Admin::create([
